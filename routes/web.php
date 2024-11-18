@@ -17,6 +17,7 @@ Route::resource('/', loginController::class)->names(['index' => 'login']);
 
 Route::middleware('auth')->group(function () {
     Route::resource('/dashboard', DashboardController::class);
+    Route::resource('/about', DashboardController::class)->names(['create' => 'about']);
     Route::resource('/worksheet', WorksheetController::class);
     Route::resource('/addSheet', AddSheetController::class);
 

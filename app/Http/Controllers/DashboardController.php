@@ -54,7 +54,18 @@ class DashboardController extends Controller
      */
     public function create()
     {
-        //
+        $role = 'Member';
+        $members = [
+            ['name' => 'Dina Olores' , 'role' => 'Leader'] , 
+            ['name' => 'Charles Ysulan', 'role' => $role],
+            ['name' => 'Bryan Argote', 'role' => $role],
+            ['name' => 'Cybel Jyd Montilla', 'role' => $role],
+            ['name' => 'Ruth Monteron', 'role' => $role],
+            ['name' => 'Ranulfo Beltran', 'role' => $role],
+            
+        ];
+
+        return view('layout.pages.about', compact('members'));
     }
 
     /**
